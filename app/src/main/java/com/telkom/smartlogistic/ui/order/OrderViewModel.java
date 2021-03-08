@@ -1,16 +1,19 @@
-package com.telkom.smartlogistic.ui.notifications;
+package com.telkom.smartlogistic.ui.order;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+/**
+ * Created by Isnaeni on 08/03/2021.
+ */
+public class OrderViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public OrderViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is order fragment");
     }
 
     public LiveData<String> getText() {

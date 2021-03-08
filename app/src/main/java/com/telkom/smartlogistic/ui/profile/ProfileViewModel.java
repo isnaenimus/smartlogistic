@@ -1,16 +1,19 @@
-package com.telkom.smartlogistic.ui.home;
+package com.telkom.smartlogistic.ui.profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+/**
+ * Created by Isnaeni on 08/03/2021.
+ */
+public class ProfileViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public ProfileViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is profile fragment");
     }
 
     public LiveData<String> getText() {
