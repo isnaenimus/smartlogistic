@@ -5,17 +5,21 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 /**
- * Created by AasSuhendar on 24/03/2021.
+ * Created by AasSuhendar on 25/03/2021.
  */
 public class OtpViewModel extends ViewModel {
-    private MutableLiveData<String> mText;
+    private MutableLiveData<String> mTextAsignOTP;
+    
+    private static final String txtAsignOTP = "Masukkan kode OTP yang telah kami kirim ke Nomor HP ";
 
     public OtpViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("Otp");
+        mTextAsignOTP = new MutableLiveData<>();
+        mTextAsignOTP.setValue(txtAsignOTP);
     }
 
     public LiveData<String> getText() {
-        return mText;
+        return mTextAsignOTP;
     }
+
+
 }

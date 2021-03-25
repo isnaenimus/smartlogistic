@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.telkom.smartlogistic.R;
 import com.telkom.smartlogistic.base.BaseActivity;
 import com.telkom.smartlogistic.ui.login.LoginActivity;
@@ -18,8 +19,9 @@ import com.telkom.smartlogistic.ui.otp.OtpActivity;
  */
 public class RegistrationActivity extends AppCompatActivity {
 
-    TextView tvLogin;
-    Button btnRegister;
+    private TextView tvLogin;
+    private Button btnRegister;
+    private TextInputEditText txtFullName, txtEmail, txtPhoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
         btnRegister.setOnClickListener(v -> {
             Intent otp = new Intent(getApplicationContext(), OtpActivity.class);
+            otp.putExtra("PHONE_NUMBER",txtPhoneNumber.getText().toString().trim());
             startActivity(otp);
         });
     }
@@ -42,6 +45,9 @@ public class RegistrationActivity extends AppCompatActivity {
     private void setVariable() {
         tvLogin = findViewById(R.id.tv_link_login);
         btnRegister =  findViewById(R.id.btn_register);
+        txtPhoneNumber = findViewById(R.id.input_phone_register);
+        txtFullName = findViewById(R.id.input_fullname);
+        txtEmail = findViewById(R.id.input_email);
     }
 
 }

@@ -19,9 +19,9 @@ import com.telkom.smartlogistic.ui.registration.RegistrationActivity;
  */
 public class LoginActivity extends AppCompatActivity {
 
-    TextView tvRegister;
-    Button btnLogin;
-    TextInputEditText txtPhoneNumber;
+    private TextView tvRegister;
+    private Button btnLogin;
+    private TextInputEditText txtPhoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
 
         btnLogin.setOnClickListener(v -> {
             Intent otp = new Intent(getApplicationContext(), OtpActivity.class);
+            otp.putExtra("PHONE_NUMBER",txtPhoneNumber.getText().toString().trim());
             startActivity(otp);
         });
     }
