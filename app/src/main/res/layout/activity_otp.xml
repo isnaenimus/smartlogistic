@@ -15,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:padding="16dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="30dp"
             android:orientation="vertical">
 
             <ImageView
@@ -33,16 +34,10 @@
                 android:gravity="center_vertical"
                 android:lineSpacingExtra="6sp"
                 android:text="Kode OTP"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 android:textAppearance="@style/masuk" />
 
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:gravity="top"-->
-<!--                android:text="@string/asign"-->
-<!--                android:textColor="#757575"-->
-<!--                android:textSize="14sp" />-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,35 +64,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="70dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
+                <com.chaos.view.PinView
+                    android:id="@+id/input_otp_login"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:hintEnabled="true"
-                    app:endIconMode="clear_text">
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:inputType="number"
+                    android:textColor="@color/blue_80"
+                    android:textSize="24sp"
+                    app:itemCount="6"
+                    app:itemHeight="40dp"
+                    app:itemRadius="4dp"
+                    app:itemWidth="40dp"
+                    app:lineColor="@color/black_20" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/input_otp_login"
-                        android:inputType="number"
-                        android:hint="Kode OTP"
-                        android:textColor="@color/black"/>
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:hintEnabled="true"-->
+<!--                    app:endIconMode="clear_text">-->
 
-                </com.google.android.material.textfield.TextInputLayout>
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/input_otp_login"-->
+<!--                        android:inputType="number"-->
+<!--                        android:hint="Kode OTP"-->
+<!--                        android:textColor="@color/black"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
             </LinearLayout>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:lineSpacingExtra="6sp"
-                android:clickable="true"
-                android:text="12:02"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="00:"/>
+
+                <TextView
+                    android:id="@+id/tv_countdown"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lineSpacingExtra="6sp"
+                    android:clickable="true"
+                    android:text="00"/>
+            </LinearLayout>
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_countdown"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:lineSpacingExtra="6sp"-->
+<!--                android:clickable="true"-->
+<!--                android:text="00:02"/>-->
 
             <TextView
                 android:id="@+id/tv_link_resend"

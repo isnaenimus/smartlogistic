@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.telkom.smartlogistic.R;
 import com.telkom.smartlogistic.ui.otp.OtpActivity;
 import com.telkom.smartlogistic.ui.registration.RegistrationActivity;
@@ -20,8 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
     TextView tvRegister;
     Button btnLogin;
-    EditText txtPhoneNumber;
-
+    TextInputEditText txtPhoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,13 +15,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:padding="16dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="30dp"
             android:orientation="vertical">
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </ScrollView>
 
             <ImageView
                 android:layout_width="152dp"
@@ -38,6 +34,7 @@
                 android:gravity="center_vertical"
                 android:lineSpacingExtra="6sp"
                 android:text="Daftar"
+                android:textStyle="bold"
                 android:textAppearance="@style/masuk" />
 
             <TextView
@@ -128,6 +125,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
