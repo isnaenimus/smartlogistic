@@ -4,6 +4,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.telkom.smartlogistic.framework.core.base.BaseViewModel;
+
 /**
  * Created by Isnaeni on 08/03/2021.
  */

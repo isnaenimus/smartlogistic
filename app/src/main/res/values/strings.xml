@@ -4,4 +4,16 @@
     <string name="title_order">Order</string>
     <string name="title_history">History</string>
     <string name="title_profile">Profile</string>
+    <string name="label_onboarding_title_1">Pembayaran Cepat</string>
+    <string name="label_onboarding_title_2">Ongkos Kirim Terjangkau</string>
+    <string name="label_onboarding_title_3">Pelabuhan Indonesia</string>
+    <string name="label_onboarding_text_1">Metode bayar yang lengkap dan proses cepat, aman untuk melakukan pembayaran karena menggunakan e-Payment. </string>
+    <string name="label_onboarding_text_2">Puluhan pelabuhan di Indonesia yang terdaftar di aplikasi Smart Logistic untuk pengiriman dan penerimaan jasa ke seluruh Indonesia.</string>
+    <string name="label_onboarding_text_3">Solusi untuk pengiriman dan penerimaan jasa ke Seluruh Indonesia melalui jalur laut dari pelabuhan ke pelabuhan.</string>
+    <string name="label_login_or_signup">Solusi untuk pengiriman dan penerimaan jasa ke Seluruh Indonesia melalui jalur laut dari pelabuhan ke pelabuhan.</string>
+
+    <!--action-->
+    <string name="action_register">Daftar</string>
+    <string name="action_login">Masuk</string>
+
 </resources>

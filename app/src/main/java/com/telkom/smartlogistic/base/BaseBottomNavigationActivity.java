@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by Isnaeni on 08/03/2021.
  */
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.telkom.smartlogistic.R;
+import com.telkom.smartlogistic.framework.core.base.BaseActivity;
 import com.telkom.smartlogistic.ui.dashboard.DashboardActivity;
 import com.telkom.smartlogistic.ui.history.HistoryActivity;
 import com.telkom.smartlogistic.ui.order.OrderActivity;
@@ -19,7 +19,7 @@ import com.telkom.smartlogistic.ui.profile.ProfileActivity;
 /**
  * Created by Isnaeni on 08/03/2021.
  */
-public abstract class BaseActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public abstract class BaseBottomNavigationActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     protected BottomNavigationView navigationView;
 
