@@ -4,6 +4,8 @@ import com.telkom.smartlogistic.R
 import android.os.Bundle
 import android.os.Handler
 import com.telkom.smartlogistic.framework.core.base.BaseActivity
+import com.telkom.smartlogistic.framework.util.manager.PrefManager
+import com.telkom.smartlogistic.ui.dashboard.DashboardActivity
 import com.telkom.smartlogistic.ui.onboarding.OnboardingActivity
 
 
@@ -20,10 +22,18 @@ class SplashActivity : BaseActivity() {
         val handler = Handler()
         handler.postDelayed(
                 {
-                   OnboardingActivity.startThisActivity(this)
-                    finish()
+                    goToNextPage()
                 },
                 3000
         )
+    }
+
+    private fun goToNextPage() {
+        if (PrefManager.ONBOARDING) {
+            OnboardingActivity.startThisActivity(this)
+        } else {
+            DashboardActivity.startThisActivity(this)
+        }
+        finish()
     }
 }

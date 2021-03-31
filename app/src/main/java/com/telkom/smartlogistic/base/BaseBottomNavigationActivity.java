@@ -26,7 +26,7 @@ public abstract class BaseBottomNavigationActivity extends BaseActivity implemen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getContentViewId());
+        //setContentView(getViewLayoutResId());
 
         navigationView = findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
@@ -73,7 +73,7 @@ public abstract class BaseBottomNavigationActivity extends BaseActivity implemen
         item.setChecked(true);
     }
 
-    public abstract int getContentViewId();
+    //public abstract int getContentViewId();
 
     public abstract int getBottomNavigationMenuItemId();
 }

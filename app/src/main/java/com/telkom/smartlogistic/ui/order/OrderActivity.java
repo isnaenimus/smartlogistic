@@ -16,7 +16,7 @@ public class OrderActivity extends BaseBottomNavigationActivity {
     }
 
     @Override
-    public int getContentViewId() {
+    public int getViewLayoutResId() {
         return R.layout.activity_order;
     }
 

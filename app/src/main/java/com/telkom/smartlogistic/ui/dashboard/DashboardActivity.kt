@@ -4,18 +4,25 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import android.view.View
 import com.telkom.smartlogistic.R
 import com.telkom.smartlogistic.base.BaseBottomNavigationActivity
+import com.telkom.smartlogistic.databinding.ActivityDashboardBinding
+import com.telkom.smartlogistic.framework.core.owner.ViewDataBindingOwner
+import com.telkom.smartlogistic.framework.core.owner.ViewModelOwner
+import com.telkom.smartlogistic.ui.onboarding.OnboardingActivity
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * Created by Isnaeni on 08/03/2021.
  */
-class DashboardActivity : BaseBottomNavigationActivity() {
-    private var dashboardViewModel: DashboardViewModel? = null
-    var textView: TextView? = null
+class DashboardActivity : BaseBottomNavigationActivity(),
+    DashboardView,
+    ViewModelOwner<DashboardViewModel>,
+    ViewDataBindingOwner<ActivityDashboardBinding> {
+
+    override lateinit var binding: ActivityDashboardBinding
+    override val viewModel: DashboardViewModel by viewModel()
 
     companion object {
         fun startThisActivity(context: Context) {
@@ -27,20 +34,19 @@ class DashboardActivity : BaseBottomNavigationActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
-        dashboardViewModel!!.text.observe(this, Observer { text: String? -> textView!!.text = text })
-        setVariable()
+        viewModel.bText.value = "Just try right?"
+        binding.textDashboard.text = viewModel.bText.value
+
     }
 
-    private fun setVariable() {
-        textView = findViewById(R.id.text_dashboard)
-    }
-
-    override fun getContentViewId(): Int {
-        return R.layout.activity_dashboard
-    }
+    override fun getViewLayoutResId() = R.layout.activity_dashboard
 
     override fun getBottomNavigationMenuItemId(): Int {
         return R.id.navigation_dashboard
+    }
+
+    override fun onClick(view: View) {
+        OnboardingActivity.startThisActivity(this)
+        finish()
     }
 }

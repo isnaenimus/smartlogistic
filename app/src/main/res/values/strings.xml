@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmartLogistic</string>
+    <string name="title_app">Smart Logistic</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_order">Order</string>
     <string name="title_history">History</string>
@@ -16,4 +16,13 @@
     <string name="action_register">Daftar</string>
     <string name="action_login">Masuk</string>
 
+    <string name="asign">Masukkan Nomor HP Anda yang telah terdaftar di Aplikasi Smart Logistic.</string>
+    <string name="register">Daftarkan akun Anda untuk bisa masuk ke dalam Aplikasi Smart Logistic.</string>
+    <string name="nomor_hp">Nomor HP</string>
+    <string name="join">Belum punya akun? </string>
+    <string name="id_phone_code">+62</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="ask_account">Sudah punya akun?</string>
+    <string name="email">Email</string>
+    <string name="asign_otp">Masukkan kode OTP yang telah kami kirim ke Nomor HP 08131214151617.</string>
 </resources>

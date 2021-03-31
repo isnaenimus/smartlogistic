@@ -16,7 +16,7 @@ public class HistoryActivity extends BaseBottomNavigationActivity {
     }
 
     @Override
-    public int getContentViewId() {
+    public int getViewLayoutResId() {
         return R.layout.activity_history;
     }
 
