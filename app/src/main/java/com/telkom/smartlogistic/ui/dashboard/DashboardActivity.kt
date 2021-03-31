@@ -34,11 +34,7 @@ class DashboardActivity : BaseBottomNavigationActivity(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /*dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
-        dashboardViewModel!!.text.observe(this, Observer { text: String? ->
-            binding.textDashboard.text = text })
-        //setVariable()*/
-        viewModel.bText.value = "Coba Coba ji Ini"
+        viewModel.bText.value = "Just try right?"
         binding.textDashboard.text = viewModel.bText.value
 
     }

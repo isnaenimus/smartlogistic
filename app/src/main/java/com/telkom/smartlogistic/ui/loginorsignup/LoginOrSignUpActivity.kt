@@ -8,7 +8,8 @@ import com.telkom.smartlogistic.R
 import com.telkom.smartlogistic.databinding.ActivityLoginOrSignupBinding
 import com.telkom.smartlogistic.framework.core.base.BaseActivity
 import com.telkom.smartlogistic.framework.core.owner.ViewDataBindingOwner
-import com.telkom.smartlogistic.ui.dashboard.DashboardActivity
+import com.telkom.smartlogistic.ui.login.LoginActivity
+import com.telkom.smartlogistic.ui.registration.RegistrationActivity
 
 /**
  * Created by Isnaeni on 29/03/2021.
@@ -29,10 +30,10 @@ class LoginOrSignUpActivity : BaseActivity(),
     override lateinit var binding: ActivityLoginOrSignupBinding
 
     override fun onClickRegister(view: View) {
-        TODO("Not yet implemented")
+        startActivity(Intent(applicationContext, RegistrationActivity::class.java))
     }
 
     override fun onClickLogin(view: View) {
-        DashboardActivity.startThisActivity(this)
+        startActivity(Intent(applicationContext, LoginActivity::class.java))
     }
 }

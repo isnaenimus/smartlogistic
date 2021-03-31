@@ -37,7 +37,8 @@
 
         <Button
             android:id="@+id/button"
-            android:text="Coba Button"
+            style="@style/ButtonWhite"
+            android:text="Button Try"
             android:onClick="@{view::onClick}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
