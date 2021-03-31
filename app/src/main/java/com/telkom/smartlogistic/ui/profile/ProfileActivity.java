@@ -15,7 +15,7 @@ public class ProfileActivity extends BaseBottomNavigationActivity {
     }
 
     @Override
-    public int getContentViewId() { return R.layout.activity_profile; }
+    public int getViewLayoutResId() { return R.layout.activity_profile; }
 
     @Override
     public int getBottomNavigationMenuItemId() {
