@@ -35,8 +35,39 @@ public class RegistrationActivity extends AppCompatActivity {
         });
 
         btnRegister.setOnClickListener(v -> {
+            String phoneText = txtPhoneNumber.getText().toString().trim();
+            String emailText = txtEmail.getText().toString().trim();
+            String fullNameText = txtFullName.getText().toString().trim();
+
+            if (phoneText.isEmpty()) {
+                txtPhoneNumber.setError("Nomor HP tidak boleh kosong");
+                txtPhoneNumber.requestFocus();
+                return;
+            }
+
+            if (phoneText.length() < 11){
+                txtPhoneNumber.setError("Nomor HP tidak valid");
+                txtPhoneNumber.requestFocus();
+                return;
+            }
+
+            if (fullNameText.isEmpty()) {
+                txtFullName.setError("Nama Lengkap tidak boleh kosong");
+                txtFullName.requestFocus();
+                return;
+            }
+
+            if (emailText.isEmpty()) {
+                txtEmail.setError("Email tidak boleh kosong");
+                txtEmail.requestFocus();
+                return;
+            }
+
+            phoneText = "0"+phoneText;
+
+
             Intent otp = new Intent(getApplicationContext(), OtpActivity.class);
-            otp.putExtra("PHONE_NUMBER",txtPhoneNumber.getText().toString().trim());
+            otp.putExtra("PHONE_NUMBER",phoneText);
             startActivity(otp);
         });
     }

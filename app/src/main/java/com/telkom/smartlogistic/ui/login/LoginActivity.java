@@ -36,8 +36,23 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         btnLogin.setOnClickListener(v -> {
+            String phoneText = txtPhoneNumber.getText().toString().trim();
+
+            if (phoneText.isEmpty()) {
+                txtPhoneNumber.setError("Nomor HP tidak boleh kosong");
+                txtPhoneNumber.requestFocus();
+            }
+
+            if (phoneText.length() < 11){
+                txtPhoneNumber.setError("Nomor HP tidak valid");
+                txtPhoneNumber.requestFocus();
+                return;
+            }
+
+            phoneText = "0"+phoneText;
             Intent otp = new Intent(getApplicationContext(), OtpActivity.class);
-            otp.putExtra("PHONE_NUMBER",txtPhoneNumber.getText().toString().trim());
+            otp.putExtra("PHONE_NUMBER",phoneText);
+
             startActivity(otp);
         });
     }

@@ -82,6 +82,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="phone"
                         android:hint="@string/nomor_hp"
+                        android:maxLength="12"
                         app:endIconCheckable="true"
                         android:textColor="@color/black"/>
 

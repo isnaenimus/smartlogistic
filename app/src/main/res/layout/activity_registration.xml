@@ -81,6 +81,7 @@
                         android:inputType="phone"
                         android:id="@+id/input_phone_register"
                         android:hint="@string/nomor_hp"
+                        android:maxLength="12"
                         android:textColor="@color/black"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
