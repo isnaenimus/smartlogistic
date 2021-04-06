@@ -8,5 +8,5 @@ import com.telkom.smartlogistic.framework.core.base.BaseViewModel
  */
 class DashboardViewModel : BaseViewModel() {
 
-    var bText = MutableLiveData<String>("sdsdsd")
+    var bText = MutableLiveData<String>()
 }

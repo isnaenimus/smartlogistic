@@ -12,6 +12,8 @@
     <color name="dot_enable_color">#64697A</color>
     <color name="blue_background_color">#172532</color>
     <color name="colorBackgroundSplash">#273449</color>
+    <color name="green_status_color">#4CDF63</color>
+    <color name="orange_tab_color">#FF8A00</color>
 
     <!--    Secondary Color -->
     <color name="blue_80">#101057</color>
