@@ -1,6 +1,9 @@
 package com.telkom.smartlogistic.ui.history;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.FragmentTransaction;
+
 import com.telkom.smartlogistic.base.BaseBottomNavigationActivity;
 import com.telkom.smartlogistic.R;
 
@@ -13,6 +16,9 @@ public class HistoryActivity extends BaseBottomNavigationActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_history);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.mainFragment, new HistoryFragmentActivity());
+        ft.commit();
     }
 
     @Override
