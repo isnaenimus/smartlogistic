@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="view"
+            type="com.telkom.smartlogistic.ui.loginorsignup.LoginOrSignUpView" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v_top1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v_center_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.83" />
+
+        <LinearLayout
+            android:id="@+id/backround_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:background="@drawable/img_background_login"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_v_center_bottom"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/backround_2"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical"
+            android:background="#162633"
+            app:layout_constraintTop_toBottomOf="@id/guideline_v_center_bottom"/>
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_page"
+            android:text="@string/title_app"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_v_center_bottom" />
+
+        <TextView
+            android:id="@+id/text_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_page"
+            android:layout_marginVertical="@dimen/margin_default"
+            android:text="@string/label_login_or_signup"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_v_center_bottom" />
+
+        <Button
+            android:id="@+id/button_register"
+            style="@style/ButtonWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_page"
+            android:onClick="@{view::onClickRegister}"
+            android:text="@string/action_register"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@+id/button_login"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_login"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_v_bottom" />
+
+        <Button
+            android:id="@+id/button_login"
+            style="@style/ButtonPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{view::onClickLogin}"
+            android:text="@string/action_login"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/margin_page"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/button_register"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_v_bottom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

@@ -6,15 +6,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.lifecycle.ViewModelProvider;
-
-import com.telkom.smartlogistic.base.BaseActivity;
 import com.telkom.smartlogistic.R;
+import com.telkom.smartlogistic.base.BaseBottomNavigationActivity;
 import com.telkom.smartlogistic.ui.login.LoginActivity;
 
 /**
  * Created by Isnaeni on 08/03/2021.
  */
-public class ProfileActivity extends BaseActivity {
+public class ProfileActivity extends BaseBottomNavigationActivity {
 
     private ProfileViewModel profileViewModel;
     TextView textView;
@@ -42,7 +41,7 @@ public class ProfileActivity extends BaseActivity {
     }
 
     @Override
-    public int getContentViewId() { return R.layout.activity_profile; }
+    public int getViewLayoutResId() { return R.layout.activity_profile; }
 
     @Override
     public int getBottomNavigationMenuItemId() {

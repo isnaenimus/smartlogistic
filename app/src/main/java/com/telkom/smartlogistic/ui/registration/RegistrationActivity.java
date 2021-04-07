@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.telkom.smartlogistic.R;
-import com.telkom.smartlogistic.base.BaseActivity;
 import com.telkom.smartlogistic.ui.login.LoginActivity;
 import com.telkom.smartlogistic.ui.otp.OtpActivity;
 

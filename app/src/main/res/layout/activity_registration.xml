@@ -29,14 +29,12 @@
 
 
             <TextView
-                android:layout_width="60dp"
-                android:layout_height="30dp"
+                style="@style/TitleBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center_vertical"
-                android:lineSpacingExtra="6sp"
-                android:text="Daftar"
-                android:textStyle="bold"
-                android:textAppearance="@style/masuk" />
+                android:text="Daftar" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -54,7 +52,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    style="@style/InputLayout.Shrine.Dark"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content">
 
@@ -69,7 +67,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    style="@style/InputLayout.Shrine.Dark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -90,7 +88,7 @@
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/InputLayout.Shrine.Dark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -108,7 +106,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/InputLayout.Shrine.Dark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -126,11 +124,11 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                style="@style/ButtonPrimary"
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textSize="16sp"
                 android:textAllCaps="false"
                 android:text="Daftar"/>
 
@@ -154,7 +152,7 @@
                     android:id="@+id/tv_link_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/info"
                     android:text="Masuk"
                     android:textSize="14sp"
                     android:layout_marginStart="2dp"
