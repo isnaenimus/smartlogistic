@@ -13,4 +13,12 @@
     <string name="ask_account">Sudah punya akun?</string>
     <string name="email">Email</string>
     <string name="asign_otp">Masukkan kode OTP yang telah kami kirim ke Nomor HP 08131214151617.</string>
+    <string name="comma">,&#160;</string>
+    <string name="dash">&#160;-&#160;</string>
+    <string name="personal">Personal</string>
+    <string name="colaboration">Kolaborasi</string>
+    <string name="port_sender">Pelabuhan Pengirim</string>
+    <string name="port_receiver">Pelabuhan Penerima</string>
+    <string name="loading_date">Tanggal Loading</string>
+    <string name="order">Pesan</string>
 </resources>
