@@ -1,9 +1,15 @@
 <resources>
+    <!--title-->
     <string name="title_app">Smart Logistic</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_order">Order</string>
     <string name="title_history">History</string>
     <string name="title_profile">Profile</string>
+    <string name="title_depart">Berangkat</string>
+    <string name="title_arrive">Tiba</string>
+    <string name="title_break">Istirahat</string>
+
+    <!--label-->
     <string name="label_onboarding_title_1">Pembayaran Cepat</string>
     <string name="label_onboarding_title_2">Ongkos Kirim Terjangkau</string>
     <string name="label_onboarding_title_3">Pelabuhan Indonesia</string>
@@ -11,10 +17,18 @@
     <string name="label_onboarding_text_2">Puluhan pelabuhan di Indonesia yang terdaftar di aplikasi Smart Logistic untuk pengiriman dan penerimaan jasa ke seluruh Indonesia.</string>
     <string name="label_onboarding_text_3">Solusi untuk pengiriman dan penerimaan jasa ke Seluruh Indonesia melalui jalur laut dari pelabuhan ke pelabuhan.</string>
     <string name="label_login_or_signup">Solusi untuk pengiriman dan penerimaan jasa ke Seluruh Indonesia melalui jalur laut dari pelabuhan ke pelabuhan.</string>
+    <string name="label_cek_ongkir">Cek Tarif Pengiriman</string>
+    <string name="label_send_from">Dari Pelabuhan</string>
+    <string name="label_send_to">Ke Pelabuhan</string>
 
     <!--action-->
     <string name="action_register">Daftar</string>
     <string name="action_login">Masuk</string>
+    <string name="action_order_search">Cari Pesanan</string>
+    <string name="action_cek_ongkir">Cek Tarif Pengiriman</string>
+
+    <!--hint-->
+    <string name="hint_order_no">Nomor Pesanan</string>
 
     <string name="asign">Masukkan Nomor HP Anda yang telah terdaftar di Aplikasi Smart Logistic.</string>
     <string name="register">Daftarkan akun Anda untuk bisa masuk ke dalam Aplikasi Smart Logistic.</string>
