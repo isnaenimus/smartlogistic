@@ -31,6 +31,9 @@
         <activity android:name=".ui.dashboard.DashboardActivity" />
         <activity android:name=".ui.profile.ProfileActivity" />
         <activity android:name=".ui.order.OrderActivity" />
+        <activity android:name=".ui.order_detail.OrderDetailActivity" />
+        <activity android:name=".ui.order_tracking.OrderTrackingActivity" />
+        <activity android:name=".ui.jadwal_kapal.JadwalKapalActivity" />
         <activity android:name=".ui.history.HistoryActivity" />
         <activity android:name=".ui.onboarding.OnboardingActivity" />
         <activity android:name=".ui.loginorsignup.LoginOrSignUpActivity" />
