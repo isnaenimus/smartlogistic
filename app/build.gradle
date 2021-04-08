@@ -27,9 +27,9 @@ android {
 
             buildConfigField("String", "APP_ID", '"smartlogistic-telkom"')
             buildConfigField("String", "APP_NAME", '"smartlogistic"')
-            buildConfigField("String", "API_BASE_URL", '"https://api-dev.smartlogistic.id/api/"')
+            buildConfigField("String", "API_BASE_URL", '"http://18.141.138.191:1321/"')
             buildConfigField("String", "CONTENT_TYPE", '"application/json"')
-            buildConfigField("String", "AUTHORIZATION", '"Basic dGVsa29tOmRhMWMyNWQ4LTM3YzgtNDFiMS1hZmUyLTQyZGQ0ODI1YmZlYQ=="')
+            /*buildConfigField("String", "AUTHORIZATION", '"Basic dGVsa29tOmRhMWMyNWQ4LTM3YzgtNDFiMS1hZmUyLTQyZGQ0ODI1YmZlYQ=="')*/
 
             applicationId "com.telkom.smartlogistic.dev"
             resValue "string", "app_name", "SmartLogistic-Dev"
