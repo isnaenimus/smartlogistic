@@ -1,15 +1,18 @@
 package com.telkom.smartlogistic.ui.otp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.telkom.smartlogistic.R;
 import com.telkom.smartlogistic.ui.dashboard.DashboardActivity;
 
@@ -22,6 +25,8 @@ public class OtpActivity extends AppCompatActivity {
     private Button btnSendOtp;
     private TextView tvResendOtp, tvCountDown, tvAsignOTP;
     private OtpViewModel otpViewModel;
+    private CoordinatorLayout clSnackbar;
+    private static Snackbar snackbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +48,8 @@ public class OtpActivity extends AppCompatActivity {
         });
 
         tvResendOtp.setOnClickListener(v -> {
-            Toast.makeText(getApplicationContext(),"Resend OTP", Toast.LENGTH_LONG).show();
+            clSnackbar.bringToFront();
+            snackbar.make(clSnackbar,"Kode OTP sudah dikirim kembali",Snackbar.LENGTH_LONG).setAction("", null).show();
         });
 
         new CountDownTimer(60000,1000){
@@ -68,5 +74,6 @@ public class OtpActivity extends AppCompatActivity {
         tvResendOtp = findViewById(R.id.tv_link_resend);
         tvCountDown = findViewById(R.id.tv_countdown);
         tvAsignOTP = findViewById(R.id.tv_asign_otp);
+        clSnackbar =  findViewById(R.id.snackbar_layout);
     }
 }
