@@ -8,6 +8,8 @@
     <string name="title_depart">Berangkat</string>
     <string name="title_arrive">Tiba</string>
     <string name="title_break">Istirahat</string>
+    <string name="title_new_search">Pencarian baru</string>
+    <string name="title_saved_search">Pencarian tersimpan</string>
 
     <!--label-->
     <string name="label_onboarding_title_1">Pembayaran Cepat</string>
@@ -29,6 +31,8 @@
 
     <!--hint-->
     <string name="hint_order_no">Nomor Pesanan</string>
+    <string name="new_search">This is new search fragment</string>
+    <string name="saved_search">This is saved search fragment</string>
 
     <string name="asign">Masukkan Nomor HP Anda yang telah terdaftar di Aplikasi Smart Logistic.</string>
     <string name="register">Daftarkan akun Anda untuk bisa masuk ke dalam Aplikasi Smart Logistic.</string>
@@ -47,4 +51,11 @@
     <string name="port_receiver">Pelabuhan Penerima</string>
     <string name="loading_date">Tanggal Loading</string>
     <string name="order">Pesan</string>
+
+    <!--dummies-->
+    <string name="port_1">Pelabuhan Merak</string>
+    <string name="port_2">Pelabuhan Kalimas</string>
+    <string name="port_3">Pelabuhan Sunda Kelapa</string>
+    <string name="port_4">Pelabuhan Bakauheni</string>
+
 </resources>

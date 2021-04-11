@@ -1,144 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.order.OrderActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="view"
+            type="com.telkom.smartlogistic.ui.order.OrderView" />
+
+        <variable
+            name="vm"
+            type="com.telkom.smartlogistic.ui.order.OrderViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent"
+        tools:context=".ui.order.OrderActivity">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
             tools:ignore="MissingConstraints">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:padding="16dp"
+                tools:ignore="MissingConstraints">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_personal"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/black_38"
-                    android:text="@string/personal"
-                    android:textAllCaps="false"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="UnusedAttribute" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_colaboration"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:backgroundTint="@color/background"
-                    android:text="@string/colaboration"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black_54"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="UnusedAttribute" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_rounded"
-                android:orientation="vertical">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:endIconMode="clear_text"
-                    app:hintEnabled="true">
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_port_sender"
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_personal"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black_38"
+                        android:text="@string/personal"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="UnusedAttribute" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_colaboration"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:backgroundTint="@color/background"
+                        android:text="@string/colaboration"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_54"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="UnusedAttribute" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_port_senders"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/port_sender"
-                        android:textColor="@color/black" />
+                        app:endIconMode="clear_text">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <AutoCompleteTextView
+                            android:id="@+id/tv_sender_port"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            tools:ignore="LabelFor" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_port_receivers"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="@string/port_sender"
+                        app:endIconMode="clear_text">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/tv_receiver_port"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:clickable="false"
+                        app:endIconMode="clear_text"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_loading_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusableInTouchMode="false"
+                            android:hint="@string/loading_date"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/black_87"
+                        android:text="@string/order"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        tools:ignore="UnusedAttribute" />
+
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/search_tabs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    app:endIconMode="clear_text"
-                    app:hintEnabled="true">
+                    app:tabTextAppearance="@style/OrderTabs" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_port_receiver"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/port_receiver"
-                        android:textColor="@color/black" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/search_pager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:layout_marginTop="16dp"
-                    app:endIconMode="clear_text"
-                    app:hintEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/loading_date"
-                        android:textColor="@color/black" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_login"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:backgroundTint="@color/black_87"
-                    android:text="@string/order"
-                    android:textAllCaps="false"
-                    android:textSize="16sp"
-                    tools:ignore="UnusedAttribute" />
+                    app:layout_constraintTop_toBottomOf="@+id/search_tabs" />
 
             </LinearLayout>
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/order_tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+        </ScrollView>
 
-            </androidx.viewpager.widget.ViewPager>
+        <include
+            layout="@layout/item_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-        </LinearLayout>
-
-    </ScrollView>
-
-    <include
-        android:id="@+id/include"
-        layout="@layout/item_bottom_navigation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
