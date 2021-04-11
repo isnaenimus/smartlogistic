@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <style name="Theme.SmartLogistic" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
-      <!-- Primary brand color. -->
+        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -39,6 +40,11 @@
         <item name="android:background">@drawable/btn_primary_custom</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <!--<style name="RegularText">
@@ -79,6 +85,14 @@
     <style name="Line.Vertical">
         <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="OrderTabs" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:textColor">@color/black_54</item>
     </style>
 
     <style name="HomePageTabsTextAppearance" parent="TextAppearance.Design.Tab">
